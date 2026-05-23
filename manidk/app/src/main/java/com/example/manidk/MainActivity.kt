@@ -25,6 +25,9 @@ class MainActivity : Activity() {
     private lateinit var viewFlipper: ViewFlipper
     private lateinit var btnNavReport: Button
     private lateinit var btnNavManage: Button
+    private lateinit var btnViewDetails: Button
+    private lateinit var btnBackFromStudent: TextView
+    private lateinit var btnNavProfile: Button
 
     // Quiz Elements
     private lateinit var btnCreateQuiz: Button
@@ -66,6 +69,9 @@ class MainActivity : Activity() {
         btnNavReport = findViewById(R.id.btnNavReport)
         btnNavManage = findViewById(R.id.btnNavManage)
         containerActivities = findViewById(R.id.containerActivities)
+        btnNavProfile = findViewById(R.id.btnNavProfile)
+        btnViewDetails = findViewById(R.id.btnViewDetails)
+        btnBackFromStudent = findViewById(R.id.btnBackFromStudent)
 
         // Map Quiz Elements
         btnCreateQuiz = findViewById(R.id.btnCreateQuiz)
@@ -96,12 +102,12 @@ class MainActivity : Activity() {
         // NAVIGATION LISTENERS
         btnNavReport.setOnClickListener {
             viewFlipper.displayedChild = 0
-            updateNavState(true)
+            updateNavState(0)
         }
 
         btnNavManage.setOnClickListener {
             viewFlipper.displayedChild = 1
-            updateNavState(false)
+            updateNavState(1)
         }
 
         btnCreateQuiz.setOnClickListener {
@@ -113,7 +119,23 @@ class MainActivity : Activity() {
 
         btnBackFromQuiz.setOnClickListener {
             viewFlipper.displayedChild = 1
-            updateNavState(false)
+            updateNavState(1)
+        }
+
+        btnNavProfile.setOnClickListener {
+            viewFlipper.displayedChild = 5
+            updateNavState(2)
+            btnFloatingAi.visibility = View.VISIBLE
+        }
+
+        btnViewDetails.setOnClickListener {
+            viewFlipper.displayedChild = 6
+            btnFloatingAi.visibility = View.GONE
+        }
+
+        btnBackFromStudent.setOnClickListener {
+            viewFlipper.displayedChild = 0
+            btnFloatingAi.visibility = View.VISIBLE
         }
 
         // create assignemnt logic
@@ -129,7 +151,7 @@ class MainActivity : Activity() {
 
         btnBackFromAssignment.setOnClickListener {
             viewFlipper.displayedChild = 1
-            updateNavState(false)
+            updateNavState(1)
         }
 
         btnUploadFile.setOnClickListener {
@@ -196,7 +218,7 @@ class MainActivity : Activity() {
             containerActivities.addView(newItemCard, 0)
             Toast.makeText(this, "Assignment Published Successfully!", Toast.LENGTH_SHORT).show()
             viewFlipper.displayedChild = 1
-            updateNavState(false)
+            updateNavState(1)
         }
 
         // quiz publish logic
@@ -261,12 +283,12 @@ class MainActivity : Activity() {
             switchHidden.isChecked = false
             Toast.makeText(this, "Quiz Published Successfully!", Toast.LENGTH_SHORT).show()
             viewFlipper.displayedChild = 1
-            updateNavState(false)
+            updateNavState(1)
         }
 
         // Chatbot Logic
 
-        //To make the icon moveable (drag to any place we like) - referred gemini AI
+        ////To make the icon moveable (drag to any place we like) - referred gemini AI
         var dX = 0f
         var dY = 0f
         var initialX = 0f
@@ -313,7 +335,7 @@ class MainActivity : Activity() {
         btnBackFromChat.setOnClickListener {
             viewFlipper.displayedChild = 1 // Go back to manage
             btnFloatingAi.visibility = View.VISIBLE // Bring the floating button back
-            updateNavState(false)
+            updateNavState(1)
         }
 
         btnSendChat.setOnClickListener {
@@ -387,18 +409,15 @@ class MainActivity : Activity() {
         chatMessageContainer.addView(bubble)
     }
 
-    private fun updateNavState(isReportActive: Boolean) {
-        if (isReportActive) {
-            btnNavReport.setTextColor("#7C3AED".toColorInt())
-            btnNavManage.setTextColor("#6B7280".toColorInt())
-        } else {
-            btnNavReport.setTextColor("#6B7280".toColorInt())
-            btnNavManage.setTextColor("#7C3AED".toColorInt())
-        }
+    private fun updateNavState(tabIndex: Int) {
+        btnNavReport.setTextColor(if (tabIndex == 0) "#7C3AED".toColorInt() else "#6B7280".toColorInt())
+        btnNavManage.setTextColor(if (tabIndex == 1) "#7C3AED".toColorInt() else "#6B7280".toColorInt())
+        btnNavProfile.setTextColor(if (tabIndex == 2) "#7C3AED".toColorInt() else "#6B7280".toColorInt())
     }
 
     private fun deselectBottomNav() {
         btnNavReport.setTextColor("#6B7280".toColorInt())
         btnNavManage.setTextColor("#6B7280".toColorInt())
+        btnNavProfile.setTextColor("#6B7280".toColorInt())
     }
 }
