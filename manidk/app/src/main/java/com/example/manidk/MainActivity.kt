@@ -18,7 +18,7 @@ class MainActivity : Activity() { // <-- We changed this to standard Activity
         // Hide standard Action Bar for a clean, modern look
         actionBar?.hide() // <-- We changed this to match the new Activity type
 
-        setContentView(R.layout.activity_home)
+        setContentView(R.layout.activity_lecturer)
 
         // Map UI Elements
         viewFlipper = findViewById(R.id.viewFlipper)
