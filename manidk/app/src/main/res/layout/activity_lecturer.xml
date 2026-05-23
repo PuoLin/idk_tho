@@ -13,7 +13,8 @@
         android:layout_alignParentBottom="true"
         android:background="#FFFFFF"
         android:elevation="8dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:weightSum="3">
 
         <Button
             android:id="@+id/btnNavReport"
@@ -36,6 +37,18 @@
             android:textColor="#6B7280"
             android:textSize="14sp"
             android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnNavProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="👤 Profile"
+            android:textColor="#6B7280"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
     </LinearLayout>
 
     <ViewFlipper
@@ -111,6 +124,28 @@
                         android:progress="76"
                         android:progressBackgroundTint="#5B21B6"
                         android:progressTint="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="#FFFFFF"
+                    android:elevation="2dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+
+                    <Button
+                        android:id="@+id/btnViewDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="12dp"
+                        android:backgroundTint="#FEE2E2"
+                        android:text="View Details"
+                        android:textColor="#EF4444"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <TextView
@@ -823,6 +858,248 @@
                 </LinearLayout>
             </ScrollView>
         </RelativeLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lecturer Profile"
+                    android:textColor="#111827"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:text="Manage your personal information."
+                    android:textColor="#6B7280"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:elevation="2dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@android:drawable/dialog_holo_light_frame"
+                        android:backgroundTint="#E0E7FF"
+                        android:gravity="center"
+                        android:text="👨‍🏫"
+                        android:textSize="40sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Dr. Idk Tho"
+                        android:textColor="#111827"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Senior Lecturer"
+                        android:textColor="#7C3AED"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="CONTACT &amp; DETAILS"
+                    android:textColor="#111827"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="80dp"
+                    android:background="#FFFFFF"
+                    android:elevation="2dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Age" android:textSize="12sp" android:textColor="#6B7280"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="45" android:textSize="16sp" android:textColor="#111827" android:textStyle="bold" android:layout_marginBottom="12dp"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F3F4F6" android:layout_marginBottom="12dp"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Course Taught" android:textSize="12sp" android:textColor="#6B7280"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BCS2213 Network Engineering" android:textSize="16sp" android:textColor="#111827" android:textStyle="bold" android:layout_marginBottom="12dp"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F3F4F6" android:layout_marginBottom="12dp"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Email Address" android:textSize="12sp" android:textColor="#6B7280"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="idktho@umpsa.edu.my" android:textSize="16sp" android:textColor="#111827" android:textStyle="bold" android:layout_marginBottom="12dp"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F3F4F6" android:layout_marginBottom="12dp"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Phone Number" android:textSize="12sp" android:textColor="#6B7280"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+60 12-345 6789" android:textSize="16sp" android:textColor="#111827" android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/btnBackFromStudent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="⬅ Back to Reports"
+                    android:textColor="#6B7280"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Student Directory"
+                    android:textColor="#111827"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:text="Select a student to view their profile."
+                    android:textColor="#6B7280"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/btnStudentAhmad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="#FFFFFF"
+                    android:elevation="2dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@android:drawable/dialog_holo_light_frame"
+                        android:backgroundTint="#FEE2E2"
+                        android:gravity="center"
+                        android:text="👨‍🎓"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ahmad Bin Ismail"
+                            android:textColor="#111827"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CB24001 · ⚠️ High Risk"
+                            android:textColor="#EF4444"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="›"
+                        android:textColor="#9CA3AF"
+                        android:textSize="32sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="#FFFFFF"
+                    android:elevation="2dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@android:drawable/dialog_holo_light_frame"
+                        android:backgroundTint="#D1FAE5"
+                        android:gravity="center"
+                        android:text="👩‍🎓"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Siti Nurhaliza"
+                            android:textColor="#111827"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CB24002 · ✅ On Track"
+                            android:textColor="#10B981"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="›"
+                        android:textColor="#9CA3AF"
+                        android:textSize="32sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
     </ViewFlipper>
     <TextView
         android:id="@+id/btnFloatingAi"
