@@ -1,6 +1,6 @@
 # UniMate
 
-** Built by Team Dynamic Force**
+**Built by Team Dynamic Force**
 
 ## AI Tools Used:
 Gemini. By generate a Gemini API Key.
