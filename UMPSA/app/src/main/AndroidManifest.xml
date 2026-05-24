@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Allow app to connect to internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="UniMate"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.UMPSA">
+
+        <!-- First page when app opens -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name=".LecturerActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ScheduleActivity" />
+        <activity android:name=".AiLearningActivity" />
+        <activity android:name=".CommunityActivity" />
+        <activity android:name=".AssignmentReminderActivity" />
+        <activity android:name=".TodayScheduleActivity" />
+        <activity android:name=".ScanNotesActivity" />
+        <activity android:name=".UploadMaterialActivity" />
+        <activity android:name=".RegisterActivity" />
+    </application>
+
+</manifest>
