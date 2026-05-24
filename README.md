@@ -14,9 +14,9 @@ Both AI help us to identify our code problem and give us some idea and solution.
 
 
 ## Architecture Design
-### Frontend - Developed by using this Android Studio application in makrup language (xml).
-### Backend - Developed using Java in the Android Studio.
-### Database - Ubuntu cloud server mySQL.
+### Frontend ### - Developed by using this Android Studio application in makrup language (xml).
+### Backend ### - Developed using Java in the Android Studio.
+### Database ### - Ubuntu cloud server mySQL.
 
 
 ## Setup & Installation
