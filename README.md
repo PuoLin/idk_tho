@@ -30,8 +30,8 @@ Both AI help us to identify our code problem and give us some idea and solution.
 2. Enter this cmd **ssh -i "C:\path\Users\your name\Downlaods\loginkeyDynamicForce.pem" ubuntu@103.40.207.48**. Noted: the "C:\path\Users\your name\Downlaods\loginkeyDynamicForce.pem" is the location where you download our Server Key "loginkeyDynamicForce.pem".
 3. Run **sudo mysql**
 4. Run **USE umpsa_app;**
-5. Download our code name **""UMPSA.zip"** in the Github, then **extract all**.
+5. Download our code name **""UniMate"** by zip type in the Github, then **extract all**.
 6. Open the Android Studio and at above left hand-side will saw a bar for open file to run the code.
-7. Choose and click the open button and choose the **"UMPSA folder"** to run the code.
+7. Choose and click the open button and choose the **"UniMate folder"** to run the code.
 
 
